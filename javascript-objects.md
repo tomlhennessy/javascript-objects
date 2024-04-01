@@ -55,3 +55,36 @@
     - Iterating with 'for...in' loop
     - Defining and invoking methods on objects
     - Using 'Object.keys()', 'Object.values()', and 'Object.entries()' for iteration
+
+
+## Iterate Through Obj
+Takes an object as input and iterates through each key-value pair  in the object, printing them to the console in the format "key - value".
+
+```javascript
+// define a function that takes an object as input
+function printObject(obj) {
+    // iterate through each key in the object
+    for (let key in obj) {
+        // get the value associated with the current key
+        let value = obj[key];
+        // print the key-value pair to the current key
+        console.log(key + ' - ' + value);
+    }
+}
+```
+
+## Cat Builder
+Creates and returns a new cat object with specified properties based on the arguments passed to the function
+
+```javascript
+function catBuilder(name, color, toys) {
+    // create new object named "cat" with properties assigned from the parameters
+    let cat = {
+        name: name,
+        color: color,
+        toys: toys
+    };
+
+    return cat;
+}
+```
