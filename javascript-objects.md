@@ -88,3 +88,86 @@ function catBuilder(name, color, toys) {
     return cat;
 }
 ```
+
+# Reference vs Primitive Types
+
+* Primitive Types:
+    - Boolean, null, undefined, number, string
+    - immutable: cannot be directly changed
+
+* Reference Type:
+    - Object (arrays are objects too)
+    - Mutable: values can be directly changed
+
+
+# Rest and Spread
+
+* Overview:
+    - Functions in JavaScript can take fewer or more arguments than specified
+    - Rest parameter syntax captures multiple arguments into an array
+    - Spread operator syntax spreads elements of arrays or objects
+
+* Accepting Arguments
+    - Functions can take fewer arguments (default to undefined) or more arguments (extras ignored)
+
+* Rest Parameter Syntax
+    - Uses '...' before the name of the array parameter
+    - Captures incoming arguments into an array
+    - Only last parameter can be a rest parameter
+    Example:
+    - __'function logArguments(...allArguments) {...}'__
+    - Captures all incoming arguments into an array
+
+* Utilising Rest Parameters:
+    - Useful for functions with an unknown number of arguments
+    - Example: summing all incoming numbers
+
+* Spread in Objects:
+    - Spreads key-value pairs from one object to another
+    - Also used to merge multiple objects
+    Example (Spreading Arguments):
+    - Spread array elements into function arguments
+
+* Conclusion:
+    - Rest parameter collects multiple elements into an array
+    - Spread operator expands elements of arrays or objects
+
+
+# Destructuring
+
+* Overview:
+    - Destructuring allows easy access to elements in arrays or objects
+    - You can destructure arrays to reference specific elements or objects to reference specific values
+    - It's useful for simplifying code and parameter handling in functions
+
+* Destructuring Arrays:
+    - Syntax __'let [var1, var2] = array;'__
+    - Variables on left correspond to elements in array
+    Example
+    - __'let [firstEl, secondEl] = numArray;'__
+
+* Swapping Variables:
+    - Destructuring enables swapping variable values easily
+    - Example: __'[num1, num2] = [num2, num1];'__
+
+* Destructuring Objects:
+    - Syntax: __'let { key1, key2 } = obj;'__
+    - Variables match object keys
+    - Can alias variables if key names differ
+    - Useful for nested objects
+
+* Destructuring in Functions:
+    - Parameters can be destructured into variables
+    - Useful for handling objects passed to functions
+    - Simplifies accessing specific values
+    Example (Destructuring Parameters):
+    - __'function ownerName({ owner }) {...}'__
+    - Assigns value of 'owner' key to 'owner' parameter
+
+* Complex Example:
+    - Aliased object destructuring used for handling same key names
+    - Parameters can be nested objects for more complex data
+
+* Conclusion:
+    - Destructuring simplifies accessing and handling elements in arrays and objects
+    - Useful for cleaner code and easier parameter handling in functions
